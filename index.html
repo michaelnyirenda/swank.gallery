@@ -3,19 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>swank.art</title>
+    <title>+ SWANKDOTART</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="header">
-      <p>+</p>
-      <p>contact</p>
-    </div>
+    <nav>
+      <div class="logo">
+        <P>WE DON'T SAY SWAG NO MORE</P>
+        <p>WE SAY SWANK</p>
+      </div>
+      <div class="contact">
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </nav>
     <div class="container">
       <div class="row" id="row-1">
         <div class="col">
           <div class="img-container right">
-            <img src="./images/big steppa.PNG" alt="" />
+            <a href="volume1.html">
+              <img src="./images/big steppa.PNG" alt="" />
+            </a>
             <p>+ big steppa</p>
           </div>
         </div>
@@ -25,7 +32,9 @@
         <div class="col"></div>
         <div class="col">
           <div class="img-container left">
-            <img src="./images/pass the water.PNG" alt="" />
+            <a href="volume2.html">
+              <img src="./images/pass the water.PNG" alt="" />
+            </a>
             <p>+ pass the water</p>
           </div>
         </div>
@@ -33,7 +42,9 @@
       <div class="row" id="row-3">
         <div class="col">
           <div class="img-container right">
-            <img src="./images/thelma and louise.PNG" alt="" />
+            <a href="volume3.html">
+              <img src="./images/thelma and louise.PNG" alt="" />
+            </a>
             <p>+ thelma and louise</p>
           </div>
         </div>
@@ -43,7 +54,9 @@
         <div class="col"></div>
         <div class="col">
           <div class="img-container left">
-            <img src="./images/caught on camera.PNG" alt="" />
+            <a href="volume4.html">
+              <img src="./images/caught on camera.PNG" alt="" />
+            </a>
             <p>+ caught on camera</p>
           </div>
         </div>
@@ -51,7 +64,9 @@
       <div class="row" id="row-5">
         <div class="col">
           <div class="img-container right">
-            <img src="./images/red silk.PNG" alt="" />
+            <a href="red silk.html">
+              <img src="./images/red silk.PNG" alt="" />
+            </a>
             <p>+ red silk</p>
           </div>
         </div>
@@ -61,7 +76,9 @@
         <div class="col"></div>
         <div class="col">
           <div class="img-container left">
-            <img src="./images/whole lotta red.PNG" alt="" />
+            <a href="volume5.html">
+              <img src="./images/whole lotta red.PNG" alt="" />
+            </a>
             <p>+ whole lotta red</p>
           </div>
         </div>
@@ -69,7 +86,9 @@
       <div class="row" id="row-7">
         <div class="col">
           <div class="img-container right">
-            <img src="./images/flower in bloom.PNG" alt="" />
+            <a href="volume6.html">
+              <img src="./images/flower in bloom.PNG" alt="" />
+            </a>
             <p>+ flower in bloom</p>
           </div>
         </div>
@@ -79,7 +98,9 @@
         <div class="col"></div>
         <div class="col">
           <div class="img-container left">
-            <img src="./images/ghostface killah.PNG" alt="" />
+            <a href="volume7.html">
+              <img src="./images/ghostface killah.PNG" alt="" />
+            </a>
             <p>+ ghostface killah</p>
           </div>
         </div>
@@ -87,7 +108,9 @@
       <div class="row" id="row-9">
         <div class="col">
           <div class="img-container right">
-            <img src="./images/ca$h $hit.PNG" alt="" />
+            <a href="ca$h $hit.html">
+              <img src="./images/ca$h $hit.PNG" alt="" />
+            </a>
             <p>+ ca$h $hit</p>
           </div>
         </div>
@@ -163,6 +186,23 @@
           });
         });
       });
+      // Get the navbar
+      var navbar = document.querySelector('nav');
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function scrollFunction() {
+        if (window.pageYOffset > sticky) {
+          navbar.classList.add("hide");
+        } else {
+          navbar.classList.remove("hide");
+        }
+      }
+
+      // When the user scrolls the page, execute scrollFunction 
+      window.onscroll = function() {scrollFunction()};
     </script>
   </body>
 </html>

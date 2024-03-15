@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>+ CONTACT</title>
+    <link rel="stylesheet" href="contact-style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="index.html">+</a>
+      </div>
+      <div class="links">
+        <p>DON'T INTERRUPT MY FENG SHUI</p>
+      </div>
+    </nav>
+    <footer>
+      <div class="mail">
+        <a href="mailto:swankdotpng@gmail.com">swankdotpng@gmail.com</a>
+      </div>
+      <div class="location">
+        <a href="https://en.wikipedia.org/wiki/Windhoek">Windhoek, Namibia</a>
+      </div>
+    </footer>
+    <div class="wrapper">
+      <div class="container">
+        <div>
+          <a class="text" href="https://www.instagram.com/mikedotmp3">Instagram</a>
+        </div>
+        <div>
+          <a class="text" href="https://www.tiktok.com/@mikedotmp4">tIKTOK</a>
+          <a class="text" href="https://sptfy.com/mikedotmp3">Spotify</a>
+        </div>
+        <div>
+          <a class="text" href="https://twitter.com/mikedotmp3">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let elements = document.querySelectorAll(".text");
+
+    elements.forEach((element) => {
+      let innerText = element.innerText;
+      element.innerHTML = "";
+
+      let textContainer = document.createElement("div");
+      textContainer.classList.add("block");
+
+      for (let letter of innerText) {
+        let span = document.createElement("span");
+        span.innerText = letter.trim() === "" ? "\xa0" : letter;
+        span.classList.add("letter");
+        textContainer.appendChild(span);
+      }
+
+      element.appendChild(textContainer);
+      element.appendChild(textContainer.cloneNode(true));
+    });
+
+    elements.forEach((element) => {
+      element.addEventListener("mouseover", () => {
+        element.classList.remove("play");
+      });
+    });
+
+  </script>
+</html>
