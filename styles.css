@@ -34,7 +34,7 @@ body {
 .logo a {
   font-weight: bolder;
 }
-nav {
+/* nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -43,6 +43,14 @@ nav {
   justify-content: space-between;
   z-index: 9999;
   /* Updated z-index value */
+/* } */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
 }
 p {
   font-size: 14px;
@@ -155,14 +163,7 @@ img {
   width: 100%;
   height: 400px;
 }
-nav {
-  position: fixed;
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 2;
-}
+
 a:link {
   color: red;
   background-color: transparent;
