@@ -10,6 +10,11 @@ body {
   width: 100vw;
   height: 100vh;
   background: #a80000;
+  overflow: hidden;
+    /* Hide any potential scrollbars */
+    touch-action: none;
+    /* Prevent touch actions that can lead to accidental scrolling */
+
 }
 
 nav {
@@ -175,7 +180,22 @@ a:active {
 
 
 @media screen and (max-width: 768px) {
-  .text {
+  /* .text {
     font-size: 50px;
   }
+  .links {
+    font-size: 12px;
+  }
+  .location {
+    font-size: 12px;
+  }
+  .mail {
+    font-size: 12px;
+  } */
+    nav a,
+    footer a {
+      font-size: 18px;
+      /* Adjust font size for mobile */
+    }
+  
 }
