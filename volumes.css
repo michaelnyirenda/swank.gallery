@@ -93,8 +93,8 @@ h1 {
 
 @keyframes marquee {
     0% { transform: translate(0%, -50%); }
-    50% { transform: translate(-5%, -100%); }
-    50.5% { transform: translate(-5%, -100%); }
+    50% { transform: translate(-15%, -50%); }
+    50.5% { transform: translate(-15%, -50%); }
     100% { transform: translate(0%, -50%); }
 }
 
@@ -177,13 +177,13 @@ h1 {
         width: 80%;
         /* Adjust as needed */
     }
-    .contact{
-        font-size: 12px;
-    }
     .marquee-wrapper h1 {
         font-size: 80px;
         /* Adjust as needed */
     }
+    .contact {
+            font-size: 14px;
+        }
 }
 
 .logo a {
