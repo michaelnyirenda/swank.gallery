@@ -180,9 +180,9 @@ a:active {
 
 
 @media screen and (max-width: 768px) {
-  /* .text {
+   .text {
     font-size: 50px;
-  }
+  }/*
   .links {
     font-size: 12px;
   }
