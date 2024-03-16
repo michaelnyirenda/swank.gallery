@@ -192,13 +192,7 @@ a:active {
   .mail {
     font-size: 12px;
   }
-  .text {
-    line-height: 125px;
+  .container {
+    padding: 0 1em;
   }
-    /* nav a,
-    footer a {
-      font-size: 18px;
-      Adjust font size for mobile
-    } */
-  
 }
