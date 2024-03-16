@@ -177,6 +177,9 @@ h1 {
         width: 80%;
         /* Adjust as needed */
     }
+    .contact{
+        font-size: 12px;
+    }
     .marquee-wrapper h1 {
         font-size: 80px;
         /* Adjust as needed */
