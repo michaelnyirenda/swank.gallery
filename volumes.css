@@ -162,7 +162,7 @@ h1 {
     }
 
     .img {
-        width: 80%;
+        width: 90%;
         max-width: 100%;
         height: auto;
     }
@@ -174,11 +174,11 @@ h1 {
 
 @media (max-width: 600px) {
     .img {
-        width: 70%;
+        width: 80%;
         /* Adjust as needed */
     }
     .marquee-wrapper h1 {
-        font-size: 100px;
+        font-size: 80px;
         /* Adjust as needed */
     }
 }
