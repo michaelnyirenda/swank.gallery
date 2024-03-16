@@ -58,7 +58,7 @@ p {
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit:scale-down; */
 }
 
 .container {
@@ -69,6 +69,7 @@ img {
 .row {
   width: 100%;
   display: flex;
+  /* object-fit: scale-down; */
 }
 
 .col {
@@ -157,7 +158,7 @@ img {
 nav {
   position: fixed;
   width: 100%;
-  padding: 2em;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   z-index: 2;
@@ -182,4 +183,50 @@ a:hover {
 a:active {
   color: red;
   background-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .contact {
+    font-size: 14px;
+  }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: scale-down;
+    }
+    #row-1 {
+      height: 150px;
+    }
+  
+    #row-2 {
+      height: 250px;
+    }
+  
+    #row-3 {
+      height: 150px;
+    }
+  
+    #row-4 {
+      height: 250px;
+    }
+  
+    #row-5 {
+      height: 150px;
+    }
+  
+    #row-6 {
+      height: 200px;
+    }
+  
+    #row-7 {
+      height: 150px;
+    }
+  
+    #row-8 {
+      height: 250px;
+    }
+  
+    #row-9 {
+      height: 150px;
+    }
 }
