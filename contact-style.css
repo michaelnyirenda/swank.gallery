@@ -172,3 +172,10 @@ a:active {
   color: black;
   background-color: transparent;
 }
+
+
+@media screen and (max-width: 768px) {
+  .text {
+    font-size: 50px;
+  }
+}
