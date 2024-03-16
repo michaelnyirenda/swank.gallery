@@ -94,7 +94,7 @@ h1 {
 @keyframes marquee {
     0% { transform: translate(0%, -50%); }
     50% { transform: translate(-15%, -50%); }
-    50.5% { transform: translate(-15%, -50%); }
+    50.5% { transform: translate(-55%, -50%); }
     100% { transform: translate(0%, -50%); }
 }
 
