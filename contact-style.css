@@ -192,6 +192,9 @@ a:active {
   .mail {
     font-size: 12px;
   }
+  .text {
+    line-height: 125px;
+  }
     /* nav a,
     footer a {
       font-size: 18px;
