@@ -1,6 +1,6 @@
 :root {
   --color-bg: #000000;
-  --color-text: #fc3333;
+  --color-text: #ff0000;
 }
 
 * {
@@ -16,7 +16,7 @@ body {
   background: var(--color-bg);
   font-family: "Confillia Bold", sans-serif;
   font-weight: bolder;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 
 
@@ -179,6 +179,103 @@ a:active {
   background-color: transparent;
 }
 
+
+/* ipad pro */
+@media (max-width: 1200px) {
+  .contact {
+    font-size: 16px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
+
+  #row-1 {
+    height: 300px;
+  }
+
+  #row-2 {
+    height: 500px;
+  }
+
+  #row-3 {
+    height: 400px;
+  }
+
+  #row-4 {
+    height: 550px;
+  }
+
+  #row-5 {
+    height: 450px;
+  }
+
+  #row-6 {
+    height: 400px;
+  }
+
+  #row-7 {
+    height: 350px;
+  }
+
+  #row-8 {
+    height: 600px;
+  }
+
+  #row-9 {
+    height: 450px;
+  }
+}
+/* ipad pro */
+@media (max-width: 900px) {
+  .contact {
+    font-size: 16px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
+
+  #row-1 {
+    height: 300px;
+  }
+
+  #row-2 {
+    height: 500px;
+  }
+
+  #row-3 {
+    height: 350px;
+  }
+
+  #row-4 {
+    height: 550px;
+  }
+
+  #row-5 {
+    height: 350px;
+  }
+
+  #row-6 {
+    height: 400px;
+  }
+
+  #row-7 {
+    height: 350px;
+  }
+
+  #row-8 {
+    height: 550px;
+  }
+
+  #row-9 {
+    height: 350px;
+  }
+}
 @media (max-width: 600px) {
   .contact {
     font-size: 14px;

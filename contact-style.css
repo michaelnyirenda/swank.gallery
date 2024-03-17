@@ -179,25 +179,82 @@ a:active {
   background-color: transparent;
 }
 
-
-@media screen and (max-width: 768px) {
+/* ipad pro */
+@media screen and (max-width: 1200px) {
    .text {
-    font-size: 50px;
+    font-size: 80px;
   }
   .links {
-    font-size: 14px;
+    font-size: 16px;
   }
   .location {
-    font-size: 12px;
+    font-size: 16px;
   }
   .mail {
-    font-size: 12px;
+    font-size: 16px;
   }
   .container {
     padding: 0 1em;
   }
     .text {
-      line-height: 100px;
-      height: 100px;
+      line-height: 150px;
+      height: 150px;
     }
+}
+
+/* ipad */
+@media screen and (max-width: 900px) {
+  .text {
+    font-size: 50px;
+  }
+
+  .links {
+    font-size: 16px;
+  }
+
+  .location {
+    font-size: 16px;
+  }
+
+  .mail {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 1em;
+  }
+
+  .text {
+    line-height: 100px;
+    height: 100px;
+  }
+}
+
+
+/* mobile display */
+@media screen and (max-width: 600px) {
+  .text {
+    font-size: 40px;
+  }
+
+  .links {
+    font-size: 14px;
+  }
+
+  .location {
+    font-size: 12px;
+  }
+
+  .mail {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 1em;
+  }
+
+  .text {
+    line-height: 90px;
+    height: 90px;
+  }
 }
