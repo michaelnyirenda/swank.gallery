@@ -134,7 +134,7 @@ img {
   height: 450px;
 }
 #row-10 {
-  height: 650px;
+  height: 550px;
 }
 .col:nth-child(1) {
   flex: 3;
@@ -230,7 +230,7 @@ a:active {
     height: 450px;
   }
   #row-10 {
-    height: 650px;
+    height: 550px;
   }
 }
 /* ipad pro */
