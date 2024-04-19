@@ -133,7 +133,9 @@ img {
 #row-9 {
   height: 450px;
 }
-
+#row-10 {
+  height: 650px;
+}
 .col:nth-child(1) {
   flex: 3;
   display: flex;
@@ -227,6 +229,9 @@ a:active {
   #row-9 {
     height: 450px;
   }
+  #row-10 {
+    height: 650px;
+  }
 }
 /* ipad pro */
 @media (max-width: 900px) {
@@ -275,6 +280,9 @@ a:active {
   #row-9 {
     height: 350px;
   }
+  #row-10 {
+    height: 450px;
+  }
 }
 @media (max-width: 600px) {
   .contact {
@@ -319,5 +327,8 @@ a:active {
   
     #row-9 {
       height: 150px;
+    }
+    #row-10 {
+      height: 250px;
     }
 }

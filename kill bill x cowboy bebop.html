@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>+ KILL BILL X COWBOY BEBOP LASERDISC COLLECTION</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="volumes.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">+</a>
+        </div>
+        <div class="contact">
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="overlay">
+            <div class="t-1 marquee-wrapper">
+                <h1>+ the bride + the bride + the bride + the bride + the bride + the bride + the bride + the bride + the bride + the bride + the bride + the bride + the bride + the bride + the bride + the bride + the bride +</h1>
+            </div>
+            <div class="t-2 marquee-wrapper">
+                <h1>+ cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth
+                    + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth
+                    + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth
+                    + cottonmouth + cottonmouth + cottonmouth + cottonmouth + cottonmouth +</h1>
+            </div>
+            <div class="t-3 marquee-wrapper">
+                <h1>+ copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead +
+                    copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead +
+                    copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead + copperhead +</h1>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal-images">
+                <div class="img" id="t-1">
+                    <img src="./images/the bride.jpg" alt="" />
+                </div>
+
+                <div class="img" id="t-2">
+                    <img src="./images/cottonmouth.jpg" alt="" />
+                </div>
+
+                <div class="img" id="t-3">
+                    <img src="./images/copperhead.jpg" alt="" />
+                </div>
+            </div>
+
+            <div class="info">
+                <p class="name">+</p>
+                <p class="role">+</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cursor">
+        <i class="ph-light ph-arrow-left"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script>
+        const team = [
+            { name: "+ the bride", role: "swank.png" },
+            { name: "+ cottonmouth", role: "swank.png" },
+            { name: "+ copperhead", role: "swank.png" },
+        ];
+
+        const cursor = document.querySelector('.cursor');
+        const cursorIcon = cursor.querySelector('i');
+
+        const cursorWidth = cursor.offsetWidth / 2;
+        const cursorHeight = cursor.offsetHeight / 2;
+
+        let currentSlide = 1;
+        const totalSlides = 4;
+
+        const updateCursorClass = (xPosition) => {
+            const halfPageWidth = window.innerWidth / 2;
+            if (xPosition > halfPageWidth) {
+                if (currentSlide < totalSlides) {
+                    cursorIcon.classList.remove('ph-arrow-left');
+                    cursorIcon.classList.add('ph-arrow-right');
+                    cursor.style.display = '';
+                } else {
+                    cursor.style.display = 'none';
+                }
+            } else {
+                if (currentSlide > 1) {
+                    cursorIcon.classList.remove('ph-arrow-right');
+                    cursorIcon.classList.add('ph-arrow-left');
+                    cursor.style.display = '';
+                } else {
+                    cursor.style.display = 'none';
+                }
+            }
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, {
+                x: e.clientX - cursorWidth,
+                y: e.clientY - cursorHeight,
+                duration: 1,
+                ease: "power3.out"
+            });
+
+            updateCursorClass(e.clientX);
+        });
+
+        const updateInfo = (slideNumber) => {
+            const member = team[slideNumber - 1];
+            document.querySelector('.info .name').textContent = member.name;
+            document.querySelector('.info .role').textContent = member.role;
+        };
+
+        const animateSlide = (slideNumber, reveal) => {
+            const marquee = document.querySelector(`.t-${slideNumber}.marquee-wrapper`);
+            const img = document.getElementById(`t-${slideNumber}`);
+            const clipPathValue = reveal ? 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)' : 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)';
+
+            gsap.to(marquee, { clipPath: clipPathValue, duration: 1, ease: "power4.out", delay: 0.3 });
+
+            gsap.to(img, { clipPath: clipPathValue, duration: 1, ease: "power4.out" });
+        };
+
+        updateInfo(currentSlide);
+
+        const handleRightClick = () => {
+            if (currentSlide < totalSlides) {
+                animateSlide(currentSlide + 1, true);
+                currentSlide++;
+                updateInfo(currentSlide);
+            }
+        }
+
+        const handleLeftClick = () => {
+            if (currentSlide > 1) {
+                animateSlide(currentSlide, false);
+                currentSlide--;
+                updateInfo(currentSlide);
+            }
+        }
+
+        document.addEventListener('click', (e) => {
+            const halfPageWidth = window.innerWidth / 2;
+            if (e.clientX > halfPageWidth) {
+                handleRightClick();
+            } else {
+                handleLeftClick();
+            }
+        })
+    </script>
+</body>
+
+</html>
